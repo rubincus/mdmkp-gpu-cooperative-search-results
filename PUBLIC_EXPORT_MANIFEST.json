@@ -1,5 +1,5 @@
 {
- "exported_at": "2026-10-06T14:45:55Z",
+ "exported_at": "2026-10-06T17:53:14Z",
  "campaign_seeds": {
   "100": [
    1,
@@ -59,17 +59,17 @@
   "data/interaction/runs.csv": "3d3e376cf973d4b3f4647c1bce1a7ccb72ef707250e4a059707f69d9fe4a4d7b",
   "data/interaction/traces.csv": "0fe197e3ad9d7832653be5e2f2d70abbed5436f4362b18585e7dd5ce3ca6268f",
   "data/isolation.csv": "fdfcc19452654d48fba952ae627bd8bed25f4640daa70735cf0fffbacfdf4da5",
-  "data/reference_sources.csv": "2ffbe4d1004d54f6aca3e70cf376c18b4b490cf38d926642d8979eec4017b284",
-  "data/reference_values.csv": "abac81abe6f977a06db86979ab644fd6c3d0c19abd7c98085d1583a45ac3382b",
+  "data/reference_sources.csv": "3936b370e10b96972b913e592ce6eb706075f7cb4ac73c91c5e13aa5655adcb7",
+  "data/reference_values.csv": "8e0f9593c81ddde0d505f52ab67336454fb97b930ae91d94902e8916e057cba5",
   "data/sensitivity/runs.csv": "47abfec7d1d4fade7754c6a2bc8fa6f93628f642437608110d0e67d98c67c89b",
   "data/sensitivity/traces.csv": "740556b794c67b260a0cdceb774b3d8b40815be9b0247aef790a8f94d5ec67be",
   "data/tuning/runs.csv": "4e262a048960afa8f1c3d23bfc4a5656311a4f5e5c05aa5582ff99307c8308d7",
   "data/tuning/traces.csv": "c1e20100e1ffeab0cb0eec2c1cbfa238a784e8b51531b2305b2fda4ead24a9a7",
   "data/variants.csv": "d547056f81ab4aead705bcdb9e226e89690a2be65b7d3274aa9d5e557f69e0e6",
-  "README.md": "e5e4e852d95607af1c57bd7d88f5a96c08735807619be0951ad3c6c09484008a",
+  "README.md": "5c16cb394deda93bb236477b06bbe147d0b50dc8fe8d30fdd1c5520436b52947",
   "scripts/download_instances.py": "eaeba680ba2058390d3d4b37432b5acbd504acaff19c4a1f3d1d90d8ae764650",
   "scripts/test_verifier.py": "af4ba9a6e25be1f3a9ff58bd8b7bfecee445fbda4eb4a2d3e60bb1ec7a01403e",
-  "scripts/verify_solutions.py": "d0f5c06cdebcdf5e5d82964223aefe88d9e57ce466e7122197532dd27edd8f8e",
+  "scripts/verify_solutions.py": "e9ead9cbce07b4eb2102794e0772bcb0cd4715646ff53c546bc3373bb6c17c2f",
   "solutions/ablation.csv": "bbba6a1f24dab618f0a15f463140be4d7cbd261b9ddfd6fb5a4de8c6ff72c588",
   "solutions/behaviour.csv": "144d4ebe0879b7027b20b5065316d63fa4d4daef6cf8c92bb286ac2cebb974a2",
   "solutions/best/n1000_1-0.25-M.json": "11830a0a287fa3aeed3011c6fa9d6be1a45a675d661c8fcee305d1656bccb325",

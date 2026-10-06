@@ -1,14 +1,11 @@
-column,description,source
-tsts_best,"TSTS, best value","Lai, Hao and Yue (2019)"
-tsts_avg,"TSTS, average value","Lai, Hao and Yue (2019)"
-tsts_sd,"TSTS, standard deviation (instances with 100 items)","Lai, Hao and Yue (2019)"
-core_lp_1s_tsts_best,"CORE-LP-1S-TSTS, best value",Al-Shihabi (2021)
-core_lp_1s_tsts_avg,"CORE-LP-1S-TSTS, average value",Al-Shihabi (2021)
-cp_ip_ms_best,"CP-IP-MS, best value",Al-Shihabi (2025)
-cp_ip_ms_avg,"CP-IP-MS, average value",Al-Shihabi (2025)
-cp_ip_ms_avg_inconsistent,1 if the published average of CP-IP-MS is inconsistent with its best value; left out of the comparisons of averages of the manuscript,
-af_best,"AF, best value",Cattarinich et al. (2026)
-af_avg,"AF, average value",Cattarinich et al. (2026)
-bkv,best-known value published for the instances with 500 items,Al-Shihabi (2025)
-published_best,largest of the best values of the row: the published best of the manuscript,
-published_best_sources,columns that attain the published best,
+columns,groups,description,source
+"tsts_best, tsts_avg, tsts_sd",100,"TSTS: best value, average and standard deviation","Lai, Hao and Yue (2019), Table A.1"
+"tsts_best, tsts_avg",500,TSTS: best value and average of 10 runs of 600 s,"Al-Shihabi (2021), Table 4; repeated in Al-Shihabi (2025), Table 5"
+"core_lp_ls_tsts_best, core_lp_ls_tsts_avg",500,CORE-LP-LS-TSTS: best value and average of 10 runs of 600 s,"Al-Shihabi (2021), Table 4; repeated in Al-Shihabi (2025), Table 5"
+"cp_lb_ms_best, cp_lb_ms_avg",500,CP-LB-MS: best value and average of 5 runs of 600 s,"Al-Shihabi (2025), Table 5"
+bkv,500,best-known value,"Al-Shihabi (2025), Table 5"
+"tsts_best, tsts_avg, core_lp_ls_tsts_best, core_lp_ls_tsts_avg, cp_lb_ms_best, cp_lb_ms_avg",1000,"TSTS, CORE-LP-LS-TSTS and CP-LB-MS: best value and average of 5 runs of 1000 s","Al-Shihabi (2025), Table 6"
+"af_best, af_avg",1000,AF: best value and average,Cattarinich et al. (2026)
+inconsistent,"500, 1000","published values of the row that contradict the other values published for the instance: an average above the best value of the same method, a best value of TSTS or CORE-LP-LS-TSTS above the best-known value, or a value more than 3 % away from every value of the other methods; left out of the published best and of the comparisons of the manuscript",
+published_best,all,largest of the consistent best values of the row: the published best of the manuscript,
+published_best_sources,all,columns that attain the published best,

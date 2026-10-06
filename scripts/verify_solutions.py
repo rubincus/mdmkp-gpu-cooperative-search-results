@@ -19,7 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / 'data'
-BEST_COLUMNS = ['tsts_best', 'core_lp_1s_tsts_best', 'cp_ip_ms_best', 'af_best', 'bkv']
+BEST_COLUMNS = ['tsts_best', 'core_lp_ls_tsts_best', 'cp_lb_ms_best', 'af_best', 'bkv']
 
 
 def read_csv(path):
@@ -156,14 +156,15 @@ def main():
         print(f'{folder.name}: {good} of {len(sols)} solutions feasible, with the recorded profit and number of '
               f'items; {len(traces)} traces')
 
-    # reference values
+    # reference values: the published best is the largest best value not listed as inconsistent
     refs = {}
     for r in read_csv(DATA / 'reference_values.csv'):
-        vals = {c: int(r[c]) for c in BEST_COLUMNS if r[c] != ''}
+        skip = set(filter(None, r['inconsistent'].split(';')))
+        vals = {c: float(r[c]) for c in BEST_COLUMNS if r[c] != '' and c not in skip}
         top = max(vals.values())
-        if int(r['published_best']) != top:
-            fail(f'reference values {r["group"]} {r["instance"]}: published_best is not the largest best value')
-        refs[(r['group'], r['instance'])] = top
+        if float(r['published_best']) != top:
+            fail(f'reference values {r["group"]} {r["instance"]}: published_best is not the largest consistent best value')
+        refs[(r['group'], r['instance'])] = int(top)
 
     # campaign summary and best solutions
     dev = {(r['group'], r['instance']) for r in read_csv(DATA / 'development_instances.csv')}

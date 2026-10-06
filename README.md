@@ -15,7 +15,7 @@ COTS-GPU performed independent runs with seeds 1, 2, ... on every instance (900 
 | 500 | 30 | 10 | 600 s | 25 |
 | 1000 | 60 | 5 | 600 s | 41 |
 
-The published best of an instance is the largest best value published for it by TSTS, CORE-LP-1S-TSTS, CP-IP-MS and
+The published best of an instance is the largest best value published for it by TSTS, CORE-LP-LS-TSTS, CP-LB-MS and
 AF, together with the best-known values (BKV) published for the instances with 500 items
 (`data/reference_values.csv`). The best value of COTS-GPU exceeds the published best on 71 instances, 61
 of them among the 104 instances that took no part in the design pilots or in the selection of the configuration
@@ -54,10 +54,10 @@ python -m unittest discover -s scripts
 - `data/development_instances.csv`: the 16 instances used in the design pilots or in the selection of the
   configuration, with the stages that used them. They are marked with a dagger in the tables of the manuscript and
   left out of its comparison on the remaining instances.
-- `data/reference_values.csv`: the best value and the average published for each method, as used in the tables of
-  the manuscript, the published best and the methods that attain it; `data/reference_sources.csv` describes each
-  column. Two averages of CP-IP-MS with 1000 items are inconsistent with the corresponding best values and are
-  flagged in the column `cp_ip_ms_avg_inconsistent`.
+- `data/reference_values.csv`: the best value and the average published for each method, exactly as printed in the
+  source tables, the published best and the methods that attain it; `data/reference_sources.csv` gives the source
+  table of each column. 7 published values contradict the other values published for their instance; the column
+  `inconsistent` lists them, and they are left out of the published best and of the comparisons of the manuscript.
 - `data/campaign/`: `runs.csv` (one row per run: profit, number of items, time at which the run reaches its best
   value, wall time, iterations summed over the trajectories, number of trajectories and of intensifiers, time limit,
   and the SHA-256 of the kernel and host files), `traces.csv` (every improvement of the best value of each run, with
