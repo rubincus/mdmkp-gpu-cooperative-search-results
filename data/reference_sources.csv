@@ -5,7 +5,9 @@ columns,groups,description,source
 "cp_lb_ms_best, cp_lb_ms_avg",500,CP-LB-MS: best value and average of 5 runs of 600 s,"Al-Shihabi (2025), Table 5"
 bkv,500,best-known value,"Al-Shihabi (2025), Table 5"
 "tsts_best, tsts_avg, core_lp_ls_tsts_best, core_lp_ls_tsts_avg, cp_lb_ms_best, cp_lb_ms_avg",1000,"TSTS, CORE-LP-LS-TSTS and CP-LB-MS: best value and average of 5 runs of 1000 s","Al-Shihabi (2025), Table 6"
-"af_best, af_avg",1000,AF: best value and average,Cattarinich et al. (2026)
-inconsistent,"500, 1000","published values of the row that contradict the other values published for the instance: an average above the best value of the same method, a best value of TSTS or CORE-LP-LS-TSTS above the best-known value, or a value more than 3 % away from every value of the other methods; left out of the published best and of the comparisons of the manuscript",
+"af_best, af_avg, af_sd",100,"AF: best value, average and standard deviation of 30 runs","Cattarinich et al. (2026), Table 4"
+"af_best, af_avg",500,AF: best value and average of 30 runs,"Cattarinich et al. (2026), Table 5"
+"af_best, af_avg",1000,"AF: best value and average, 1000 s per run","Cattarinich et al. (2026), Table 6"
+inconsistent,"500, 1000","published values of the row that contradict the other values published for the instance: an average above the best value of the same method, a best value of TSTS or CORE-LP-LS-TSTS above the best-known value, or a value more than 10 % away from every value of the other methods; left out of the published best and of the comparisons of the manuscript",
 published_best,all,largest of the consistent best values of the row: the published best of the manuscript,
 published_best_sources,all,columns that attain the published best,

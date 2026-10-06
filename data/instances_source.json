@@ -1,6 +1,6 @@
 {
   "archive": {
-    "description": "benchmark.zip distributed by Lai, Hao and Yue (2019) with the instances of Gortazar et al. (2010)",
+    "description": "benchmark.zip distributed by Lai, Hao and Yue (2019), with the OR-Library instances of Cappanera and Trubian (2005) with n = 100 and n = 500 and m = q = 30",
     "page": "https://leria-info.univ-angers.fr/~jinkao.hao/mdmkp.html",
     "urls": [
       "https://leria-info.univ-angers.fr/~jinkao.hao/mdmkp/benchmark.zip",
