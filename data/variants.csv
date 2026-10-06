@@ -1,0 +1,40 @@
+folder,experiment,variant,group,description,budget_s,paired_with
+campaign,campaign,reference,100,"reference configuration: 64 trajectories, 75 % intensifiers, deletion range 1-5 %, L = 30000, construction temperature 1, penalty factor 1.1",60,
+campaign,campaign,reference,500,"reference configuration: 64 trajectories, 75 % intensifiers, deletion range 1-5 %, L = 30000, construction temperature 1, penalty factor 1.1",600,
+campaign,campaign,reference,1000,"reference configuration: 84 trajectories, 75 % intensifiers, deletion range 0.5-2.5 %, L = 5000, construction temperature 1, penalty factor 1.1",600,
+ablation,ablation,noInt,1000,no intensifiers: every trajectory explores; otherwise the reference configuration,600,campaign/reference
+ablation,ablation,redNb,1000,swaps restricted to 8 listed outgoing items; otherwise the reference configuration,600,campaign/reference
+ablation,ablation,B21,1000,21 trajectories; otherwise the reference configuration,600,campaign/reference
+ablation,ablation,noPen,1000,violation-first ranking instead of the adaptive penalty; otherwise the reference configuration,600,campaign/reference
+ablation,ablation,noExp,1000,no explorers: every trajectory intensifies; otherwise the reference configuration,600,campaign/reference
+interaction,interaction,core,1000,no explorers and no penalty; otherwise the reference configuration,600,campaign/reference
+interaction,interaction,noIntPen,1000,no intensifiers and no penalty; otherwise the reference configuration,600,ablation/noInt
+sensitivity,sensitivity,L2500,1000,L = 2500; otherwise the reference configuration,600,campaign/reference
+sensitivity,sensitivity,L10000,1000,L = 10000; otherwise the reference configuration,600,campaign/reference
+sensitivity,sensitivity,d0.25,1000,deletion range 0.25-1.25 %; otherwise the reference configuration,600,campaign/reference
+sensitivity,sensitivity,d1,1000,deletion range 1-5 %; otherwise the reference configuration,600,campaign/reference
+sensitivity,sensitivity,f50,1000,50 % intensifiers; otherwise the reference configuration,600,campaign/reference
+sensitivity,sensitivity,f90,1000,90 % intensifiers; otherwise the reference configuration,600,campaign/reference
+sensitivity,sensitivity,lam1.05,1000,penalty factor 1.05; otherwise the reference configuration,600,campaign/reference
+sensitivity,sensitivity,lam1.2,1000,penalty factor 1.2; otherwise the reference configuration,600,campaign/reference
+behaviour,behaviour,reference,1000,"reference configuration, with the trajectories sampled every 5 s",600,
+tuning,round1_screening,D,,"64 trajectories, 75 % intensifiers, deletion range 2-15 %, L = 30000, construction temperature 1",120,
+tuning,round1_screening,f90,,"64 trajectories, 90 % intensifiers, deletion range 2-15 %, L = 30000, construction temperature 1",120,
+tuning,round1_screening,dsmall,,"64 trajectories, 75 % intensifiers, deletion range 1-5 %, L = 30000, construction temperature 1",120,
+tuning,round1_screening,dlarge,,"64 trajectories, 75 % intensifiers, deletion range 5-30 %, L = 30000, construction temperature 1",120,
+tuning,round1_screening,Lint3k,,"64 trajectories, 75 % intensifiers, deletion range 2-15 %, L = 30000, L = 3000 for the intensifiers, construction temperature 1",120,
+tuning,round1_screening,B84,,"84 trajectories, 75 % intensifiers, deletion range 2-15 %, L = 30000, construction temperature 1",120,
+tuning,round1_screening,swap,,"64 trajectories, 75 % intensifiers, deletion range 2-15 %, L = 30000, swap moves only above the record, construction temperature 1",120,
+tuning,round1_screening,T03,,"64 trajectories, 75 % intensifiers, deletion range 2-15 %, L = 30000, construction temperature 0.3",120,
+tuning,round1_confirmation,D,,"64 trajectories, 75 % intensifiers, deletion range 2-15 %, L = 30000, construction temperature 1",600,
+tuning,round1_confirmation,B84,,"84 trajectories, 75 % intensifiers, deletion range 2-15 %, L = 30000, construction temperature 1",600,
+tuning,round1_confirmation,dsmall,,"64 trajectories, 75 % intensifiers, deletion range 1-5 %, L = 30000, construction temperature 1",600,
+tuning,round1_confirmation,B84ds,,"84 trajectories, 75 % intensifiers, deletion range 1-5 %, L = 30000, construction temperature 1",600,
+tuning,round2_screening,B84ds,,"84 trajectories, 75 % intensifiers, deletion range 1-5 %, L = 30000, construction temperature 1",600,
+tuning,round2_screening,L10k,,"84 trajectories, 75 % intensifiers, deletion range 1-5 %, L = 10000, construction temperature 1",600,
+tuning,round2_screening,L5k,,"84 trajectories, 75 % intensifiers, deletion range 1-5 %, L = 5000, construction temperature 1",600,
+tuning,round2_screening,L10kdt,,"84 trajectories, 75 % intensifiers, deletion range 0.5-2.5 %, L = 10000, construction temperature 1",600,
+tuning,round2_screening,L5kdt,,"84 trajectories, 75 % intensifiers, deletion range 0.5-2.5 %, L = 5000, construction temperature 1",600,
+tuning,round2_screening,B84dt,,"84 trajectories, 75 % intensifiers, deletion range 0.5-2.5 %, L = 30000, construction temperature 1",600,
+tuning,round2_confirmation,B84ds,,"84 trajectories, 75 % intensifiers, deletion range 1-5 %, L = 30000, construction temperature 1",600,
+tuning,round2_confirmation,L5kdt,,"84 trajectories, 75 % intensifiers, deletion range 0.5-2.5 %, L = 5000, construction temperature 1",600,

@@ -1,0 +1,14 @@
+column,description,source
+tsts_best,"TSTS, best value","Lai, Hao and Yue (2019)"
+tsts_avg,"TSTS, average value","Lai, Hao and Yue (2019)"
+tsts_sd,"TSTS, standard deviation (instances with 100 items)","Lai, Hao and Yue (2019)"
+core_lp_1s_tsts_best,"CORE-LP-1S-TSTS, best value",Al-Shihabi (2021)
+core_lp_1s_tsts_avg,"CORE-LP-1S-TSTS, average value",Al-Shihabi (2021)
+cp_ip_ms_best,"CP-IP-MS, best value",Al-Shihabi (2025)
+cp_ip_ms_avg,"CP-IP-MS, average value",Al-Shihabi (2025)
+cp_ip_ms_avg_inconsistent,1 if the published average of CP-IP-MS is inconsistent with its best value; left out of the comparisons of averages of the manuscript,
+af_best,"AF, best value",Cattarinich et al. (2026)
+af_avg,"AF, average value",Cattarinich et al. (2026)
+bkv,best-known value published for the instances with 500 items,Al-Shihabi (2025)
+published_best,largest of the best values of the row: the published best of the manuscript,
+published_best_sources,columns that attain the published best,

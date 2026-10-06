@@ -1,0 +1,25 @@
+{
+  "archive": {
+    "description": "benchmark.zip distributed by Lai, Hao and Yue (2019) with the instances of Gortazar et al. (2010)",
+    "page": "https://leria-info.univ-angers.fr/~jinkao.hao/mdmkp.html",
+    "urls": [
+      "https://leria-info.univ-angers.fr/~jinkao.hao/mdmkp/benchmark.zip",
+      "http://www.info.univ-angers.fr/pub/hao/mdmkp/benchmark.zip"
+    ],
+    "sha256": "7fa1c1e56e74458f96a3b2c53908c430f81a3aebeec2ea0d2d538bd427242cb3",
+    "bytes": 2257167,
+    "groups": [
+      100,
+      500
+    ]
+  },
+  "repository": {
+    "description": "repository MKMP-instances-1000 of S. Al-Shihabi, at a fixed commit",
+    "url": "https://github.com/samehShihabi/MKMP-instances-1000",
+    "commit": "a962b7bcb309f5bbe4213addb52233f903b3696e",
+    "raw_url": "https://raw.githubusercontent.com/samehShihabi/MKMP-instances-1000/a962b7bcb309f5bbe4213addb52233f903b3696e/{path}",
+    "groups": [
+      1000
+    ]
+  }
+}

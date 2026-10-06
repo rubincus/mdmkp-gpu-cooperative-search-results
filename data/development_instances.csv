@@ -1,0 +1,17 @@
+group,instance,stages
+100,0-2-1,design pilots
+100,1-5-4,design pilots
+500,3-0.25-P,round 1 screening
+500,8-0.5-P,design pilots
+500,10-0.5-P,round 1 confirmation
+500,12-0.75-P,round 1 confirmation
+500,2-0.25-M,round 1 confirmation
+500,8-0.5-M,design pilots; smoke test of the tuning; round 1 screening
+500,13-0.75-M,round 1 screening
+1000,1-0.25-P,round 2 screening
+1000,2-0.25-P,round 1 confirmation; round 2 screening
+1000,5-0.25-M,design pilots; round 1 screening; round 2 confirmation
+1000,4-0.5-M,smoke test of the tuning; round 1 screening; round 2 confirmation
+1000,7-0.5-M,round 1 confirmation; round 2 screening
+1000,3-0.75-P,design pilots; round 1 screening; round 2 confirmation
+1000,9-0.75-M,round 1 confirmation; round 2 screening
