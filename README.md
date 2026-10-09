@@ -7,17 +7,17 @@ which use only the Python standard library.
 
 ## Results
 
-COTS-GPU performed independent runs with seeds 1, 2, ... on every instance (900 runs):
+COTS-GPU performed independent runs with seeds 1, 2, ... on every instance (1200 runs):
 
 | Items | Instances | Runs per instance | Time limit | Best value above the published best |
 |---:|---:|---:|---:|---:|
 | 100 | 30 | 10 | 60 s | 3 |
 | 500 | 30 | 10 | 600 s | 25 |
-| 1000 | 60 | 5 | 600 s | 41 |
+| 1000 | 60 | 10 | 600 s | 45 |
 
 The published best of an instance is the largest best value published for it by TSTS, CORE-LP-LS-TSTS, CP-LB-MS and
 AF, together with the best-known values (BKV) published for the instances with 500 items
-(`data/reference_values.csv`). The best value of COTS-GPU exceeds the published best on 69 instances, 59
+(`data/reference_values.csv`). The best value of COTS-GPU exceeds the published best on 73 instances, 62
 of them among the 104 instances that took no part in the design pilots or in the selection of the configuration
 (`data/campaign/summary.csv`, columns `new_best` and `development`).
 
