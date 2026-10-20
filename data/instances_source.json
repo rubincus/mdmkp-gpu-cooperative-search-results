@@ -21,5 +21,15 @@
     "groups": [
       1000
     ]
+  },
+  "scherer": {
+    "description": "MDMKP_Instances.txt, Scherer Multidemand Multidimensional KP Instances, Mendeley Data, version 1 (CC BY 4.0)",
+    "doi": "https://doi.org/10.17632/jcjvdgp5xg.1",
+    "url": "https://data.mendeley.com/public-files/datasets/jcjvdgp5xg/files/352626d4-8de1-4562-9405-3fca5560b470/file_downloaded",
+    "file": "MDMKP_Instances.txt",
+    "bytes": 18360890,
+    "sha256": "49b370a465e295eadf6579535a42f624578fa9b9cca8ec077ef3c2d259fb7ba6",
+    "scale": 1000,
+    "scaled_line_end": "CRLF"
   }
 }

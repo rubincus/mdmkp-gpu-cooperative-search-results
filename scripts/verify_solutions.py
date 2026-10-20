@@ -1,9 +1,10 @@
 """Verifies the solutions and the records of this repository (Python standard library only).
 
-Run scripts/download_instances.py first. For every solution in solutions/ the script re-reads the instance file,
-checks every capacity row (load <= capacity) and every demand row (load >= demand), and recomputes the profit and
-the number of selected items. It then checks that the run tables, the traces, the per-instance summary, the
-best-solution files, the reference values and the isolation table agree with the verified solutions.
+Run scripts/download_instances.py first. For every solution of a benchmark instance in solutions/ the script re-reads
+the instance file, checks every capacity row (load <= capacity) and every demand row (load >= demand), and recomputes
+the profit and the number of selected items. It then checks that the run tables, the traces, the per-instance
+summary, the best-solution files, the reference values, the isolation table and the records of the passages agree
+with the verified solutions. The solutions on the instances of Scherer (2024) are checked by verify_scherer.py.
 
 Usage:
     python scripts/verify_solutions.py
@@ -117,7 +118,7 @@ def main():
 
     # solutions, run records and traces of every experiment
     folders = sorted(p.parent for p in DATA.glob('*/runs.csv'))
-    all_runs, solutions = {}, {}
+    all_runs, solutions, all_traces = {}, {}, {}
     for folder in folders:
         runs = read_csv(folder / 'runs.csv')
         sols = read_csv(ROOT / 'solutions' / f'{folder.name}.csv')
@@ -142,6 +143,8 @@ def main():
         for t in read_csv(folder / 'traces.csv'):
             traces[run_key(t)].append((float(t['time_s']), int(t['profit']), t['role']))
         for key, r in rmap.items():
+            if r.get('has_trace', '1') == '0':           # runs of TSTS: final values only
+                continue
             pts = traces.get(key)
             if not pts:
                 fail(f'{folder.name} {key}: no trace')
@@ -153,6 +156,7 @@ def main():
             if pts[-1][0] > float(r['budget_s']):
                 fail(f'{folder.name} {key}: the best value is reached after the time limit')
         all_runs.update(rmap)
+        all_traces.update(traces)
         print(f'{folder.name}: {good} of {len(sols)} solutions feasible, with the recorded profit and number of '
               f'items; {len(traces)} traces')
 
@@ -221,6 +225,24 @@ def main():
                 fail(f'isolation {key}: recounted {counted}')
             recount += 1
     print(f'isolation table: {len(iso)} best solutions' + (f', {recount} neighbourhoods recounted' if recount else ''))
+
+    # passages: one event per improvement of the best value of the runs design2/paths, which improve their best value
+    # through the same profits as the runs design/reference with the same seed, up to the time limit
+    events = defaultdict(list)
+    for e in read_csv(DATA / 'passages' / 'events.csv'):
+        events[(e['instance'], e['seed'])].append(int(e['profit']))
+    paths = {(k[3], k[4]): k for k in all_runs if k[:2] == ('design2', 'paths')}
+    if set(events) != set(paths) or {(c['instance'], c['seed']) for c in read_csv(DATA / 'passages' / 'counters.csv')} != set(paths):
+        fail('passages: the events, the counters and the runs design2/paths do not correspond')
+    for (lab, seed), key in paths.items():
+        own = [pt[1] for pt in all_traces.get(key, [])]
+        ref = [pt[1] for pt in all_traces.get(('design', 'reference', key[2], lab, seed), [])]
+        if events.get((lab, seed)) != own:
+            fail(f'passages {lab} seed {seed}: the events are not the improvements of the run')
+        if not ref or own[:min(len(own), len(ref))] != ref[:min(len(own), len(ref))]:
+            fail(f'passages {lab} seed {seed}: the improvements differ from those of design/reference')
+    print(f'passages: {sum(len(v) for v in events.values())} improvements of {len(paths)} runs, matching their traces '
+          f'and those of the reference runs')
 
     if failures:
         print(f'\n{len(failures)} CHECKS FAILED')

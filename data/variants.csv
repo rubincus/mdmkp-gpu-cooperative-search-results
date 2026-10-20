@@ -7,8 +7,12 @@ ablation,ablation,redNb,1000,swaps restricted to 8 listed outgoing items; otherw
 ablation,ablation,B21,1000,21 trajectories; otherwise the reference configuration,600,campaign/reference
 ablation,ablation,noPen,1000,violation-first ranking instead of the adaptive penalty; otherwise the reference configuration,600,campaign/reference
 ablation,ablation,noExp,1000,no explorers: every trajectory intensifies; otherwise the reference configuration,600,campaign/reference
+ablation,ablation,noAbove,1000,no above-record mode: the intensifiers keep their restarts from the best selection and their deletion range; otherwise the reference configuration,600,campaign/reference
 interaction,interaction,core,1000,no explorers and no penalty; otherwise the reference configuration,600,campaign/reference
 interaction,interaction,noIntPen,1000,no intensifiers and no penalty; otherwise the reference configuration,600,ablation/noInt
+cooperation,cooperation,noShare,1000,"no sharing: each intensifier restarts from its own best selection, and its own best profit is the threshold of its above-record mode; otherwise the reference configuration",600,campaign/reference
+cooperation,cooperation,B16,1000,16 trajectories; otherwise the reference configuration,600,campaign/reference
+cooperation,cooperation,B16noShare,1000,16 trajectories without sharing; otherwise the reference configuration,600,cooperation/B16
 sensitivity,sensitivity,L2500,1000,L = 2500; otherwise the reference configuration,600,campaign/reference
 sensitivity,sensitivity,L10000,1000,L = 10000; otherwise the reference configuration,600,campaign/reference
 sensitivity,sensitivity,d0.25,1000,deletion range 0.25-1.25 %; otherwise the reference configuration,600,campaign/reference
@@ -38,3 +42,18 @@ tuning,round2_screening,L5kdt,,"84 trajectories, 75 % intensifiers, deletion ran
 tuning,round2_screening,B84dt,,"84 trajectories, 75 % intensifiers, deletion range 0.5-2.5 %, L = 30000, construction temperature 1",600,
 tuning,round2_confirmation,B84ds,,"84 trajectories, 75 % intensifiers, deletion range 1-5 %, L = 30000, construction temperature 1",600,
 tuning,round2_confirmation,L5kdt,,"84 trajectories, 75 % intensifiers, deletion range 0.5-2.5 %, L = 5000, construction temperature 1",600,
+equal_resources,pilot,B1,,COTS-CPU with 1 trajectory on one core,600,
+equal_resources,pilot,B4,,COTS-CPU with 4 trajectories on one core,600,
+equal_resources,pilot,B8,,COTS-CPU with 8 trajectories on one core,600,
+equal_resources,one_core,TSTS,,"TSTS (Lai, Hao and Yue, 2019) with the settings of its published algorithm, on one core",,
+equal_resources,one_core,COTS-CPU,,"COTS-CPU with one trajectory on one core, for the time that TSTS used with the same instance and seed",,equal_resources/one_core/TSTS
+equal_resources,sixteen_threads,TSTS-16,,"16 independent TSTS runs, one per hardware thread",,
+equal_resources,sixteen_threads,COTS-CPU-16,,"COTS-CPU with 16 cooperating trajectories, one per hardware thread",,
+equal_resources,sixteen_threads,COTS-CPU-IND16,,"16 independent COTS-CPU runs of one trajectory, one per hardware thread",,
+equal_resources,design,reference,,COTS-CPU with one trajectory on one core,1000,
+equal_resources,design,noInt,,no intensification: the trajectory restarts as an explorer,1000,equal_resources/design/reference
+equal_resources,design,list8,,swaps restricted to 8 listed outgoing items,1000,equal_resources/design/reference
+equal_resources,design,noPen,,violation-first ranking instead of the adaptive penalty,1000,equal_resources/design/reference
+equal_resources,design2,noAbove,,no above-record mode,1000,equal_resources/design/reference
+equal_resources,design2,list8v,,"swaps restricted to 8 listed outgoing items, evaluated with the AVX2 instructions of the complete neighbourhood",1000,equal_resources/design/reference
+equal_resources,design2,paths,,"the reference configuration, recording the passage to every improvement of the best (data/passages/)",1000,equal_resources/design/reference
