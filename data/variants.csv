@@ -3,7 +3,7 @@ campaign,campaign,reference,100,"reference configuration: 64 trajectories, 75 % 
 campaign,campaign,reference,500,"reference configuration: 64 trajectories, 75 % intensifiers, deletion range 1-5 %, L = 30000, construction temperature 1, penalty factor 1.1",600,
 campaign,campaign,reference,1000,"reference configuration: 84 trajectories, 75 % intensifiers, deletion range 0.5-2.5 %, L = 5000, construction temperature 1, penalty factor 1.1",600,
 ablation,ablation,noInt,1000,no intensifiers: every trajectory explores; otherwise the reference configuration,600,campaign/reference
-ablation,ablation,redNb,1000,swaps restricted to 8 listed outgoing items; otherwise the reference configuration,600,campaign/reference
+ablation,ablation,redNb,1000,drops and swaps restricted to 8 listed outgoing items; otherwise the reference configuration,600,campaign/reference
 ablation,ablation,B21,1000,21 trajectories; otherwise the reference configuration,600,campaign/reference
 ablation,ablation,noPen,1000,violation-first ranking instead of the adaptive penalty; otherwise the reference configuration,600,campaign/reference
 ablation,ablation,noExp,1000,no explorers: every trajectory intensifies; otherwise the reference configuration,600,campaign/reference
@@ -52,8 +52,9 @@ equal_resources,sixteen_threads,COTS-CPU-16,,"COTS-CPU with 16 cooperating traje
 equal_resources,sixteen_threads,COTS-CPU-IND16,,"16 independent COTS-CPU runs of one trajectory, one per hardware thread",,
 equal_resources,design,reference,,COTS-CPU with one trajectory on one core,1000,
 equal_resources,design,noInt,,no intensification: the trajectory restarts as an explorer,1000,equal_resources/design/reference
-equal_resources,design,list8,,swaps restricted to 8 listed outgoing items,1000,equal_resources/design/reference
+equal_resources,design,list8,,drops and swaps restricted to 8 listed outgoing items,1000,equal_resources/design/reference
 equal_resources,design,noPen,,violation-first ranking instead of the adaptive penalty,1000,equal_resources/design/reference
 equal_resources,design2,noAbove,,no above-record mode,1000,equal_resources/design/reference
-equal_resources,design2,list8v,,"swaps restricted to 8 listed outgoing items, evaluated with the AVX2 instructions of the complete neighbourhood",1000,equal_resources/design/reference
+equal_resources,design2,list8v,,"drops and swaps restricted to 8 listed outgoing items, evaluated with the AVX2 instructions of the complete neighbourhood",1000,equal_resources/design/reference
 equal_resources,design2,paths,,"the reference configuration, recording the passage to every improvement of the best (data/passages/)",1000,equal_resources/design/reference
+equal_resources,design3,list8vL,,"the variant list8v of design2 with L = 72599, so that its walks last about as long in seconds as those of the reference configuration",1000,equal_resources/design/reference

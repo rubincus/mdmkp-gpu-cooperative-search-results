@@ -1,5 +1,5 @@
 {
- "exported_at": "2026-10-20T23:54:05Z",
+ "exported_at": "2026-11-01T19:43:46Z",
  "campaign_seeds": {
   "100": [
    1,
@@ -46,7 +46,7 @@
   "sensitivity": 96,
   "behaviour": 6,
   "tuning": 234,
-  "equal_resources": 1302,
+  "equal_resources": 1320,
   "scherer": 180
  },
  "files": {
@@ -64,9 +64,9 @@
   "data/cooperation/runs.csv": "3ceb19ef654d0ef431593b1349604d56b6d6597f78b53ae7aa7baf52889ca3e8",
   "data/cooperation/traces.csv": "b5f8e003a0d49da4561dd24cb14170fc4018d1540604c660f65c3e9563760be9",
   "data/development_instances.csv": "5ed8bc60cf93ac8bc74361c19b08d134fcbf47044e5cd36644487f0be9e3b8fc",
-  "data/equal_resources/programs.csv": "8725f00a8d2ca162a7a35cdb8b936fd0cddc6b9d142bbef4bf4af933a820c177",
-  "data/equal_resources/runs.csv": "23801881f06e4ef3d42cf1776250f5ce4b1c30f91f0e8a404f1a5edd3de6076c",
-  "data/equal_resources/traces.csv": "b1727945dc5b46c28a29adb0b013ee3e4d8d0e42fb3cf65af272f14cfc43a7d0",
+  "data/equal_resources/programs.csv": "ab68c79f8adaee65d228743523726126523f5b36be52f212e4f3f94e840d5985",
+  "data/equal_resources/runs.csv": "16d871ba497ef6d86ba5cea5fbb1d28f94ff7f455d7c0f28585c87ce2417d828",
+  "data/equal_resources/traces.csv": "4e52a278a1a345e19bf9a422f7bba80b511fcb0fb0d7241f57dee9859a3d1ee1",
   "data/instances.csv": "90a10d399c255b1621a1fc4d542d5a59aae2af7483d9d85477e3a84b636818ad",
   "data/instances_source.json": "d22248e924b6b1ae5a997a19b4c3244c65f4114841f8415436b7512c326ff471",
   "data/interaction/runs.csv": "3d3e376cf973d4b3f4647c1bce1a7ccb72ef707250e4a059707f69d9fe4a4d7b",
@@ -81,8 +81,8 @@
   "data/sensitivity/traces.csv": "740556b794c67b260a0cdceb774b3d8b40815be9b0247aef790a8f94d5ec67be",
   "data/tuning/runs.csv": "4e262a048960afa8f1c3d23bfc4a5656311a4f5e5c05aa5582ff99307c8308d7",
   "data/tuning/traces.csv": "c1e20100e1ffeab0cb0eec2c1cbfa238a784e8b51531b2305b2fda4ead24a9a7",
-  "data/variants.csv": "ecd497aa5da3b4db2651bade465ada307a21db477f8007d4c1fc745c6115c87f",
-  "README.md": "28e392150aa51173f9b0cb56a4d83233b9e67169ce5a41bb9e8b9c3b709b7828",
+  "data/variants.csv": "5c8b3effd3e3a0337680a97f771c5e9af4c20117ebb5c6b00846fed1db25549d",
+  "README.md": "cabaa2d8de4933973032c03464825dd90a2ba70cf0e36630e0d8813fb7a87813",
   "scripts/download_instances.py": "b6ee4871f7719df2b8d38740423f61f1993e26a6f06ecd6724ba2e5e0f24c0f4",
   "scripts/test_verifier.py": "d58d0eb34cddf6c6a062b3ee38abaa454bb93c645fd6ac438250bed57723b8e3",
   "scripts/verify_scherer.py": "369cbc1e589a52a3324e7301af8a8ffc1ffdbebddd104ea91f3aa1da26da3765",
@@ -211,7 +211,7 @@
   "solutions/best/n500_9-0.5-P.json": "2fa87c0686f851864a00fe4602b915f08f3d49e4df94fc941fd0caf1c6c6969b",
   "solutions/campaign.csv": "6653e08709d198d5ba557ee92d20031ef5105d18228b997907130db77914d668",
   "solutions/cooperation.csv": "30096aed1ceea014e370a7b6fcb6b7eae04870ddb4a4dab14de3fb265eaac7aa",
-  "solutions/equal_resources.csv": "ae0a508d60b8cb5e7d7fe28a49d1b24105b6ff0f18b99fa9de2bcc3c02a2c2f3",
+  "solutions/equal_resources.csv": "520fc64d1715f5877863d0180fd9e192cb1b8cf79ccae951fbcfc918e3fabe55",
   "solutions/interaction.csv": "757e02fd14e503e446110c03731c4029103871a3203ea5eeae255d0f4ad44aa9",
   "solutions/scherer.csv": "5530f4ae876ad5571ab1e13be5592e10af4d1d98594b6a42adbaea8111c572af",
   "solutions/sensitivity.csv": "65a34c2024b8ab1b4158c5acce216166a1b7f0969b080c379c657953d3b02bca",

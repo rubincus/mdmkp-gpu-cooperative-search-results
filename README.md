@@ -87,15 +87,15 @@ python -m unittest discover -s scripts
   - `data/behaviour/`: the reference configuration on the same 6 instances with seed 1 and runs of 600 s, sampled every 5 s without altering the search (`samples.csv`; 6 runs).
   - `data/tuning/`: the two rounds of the selection of the configuration, each with a screening and a confirmation, on 13 instances with seeds 1 to 3 and runs of 120 s or 600 s (234 runs).
 - `data/equal_resources/`: the comparison with equal computational resources on the eight performance cores of the
-  CPU (1302 runs, 534 of them of TSTS). `runs.csv` has one row per run: experiment, variant, program, time
+  CPU (1320 runs, 534 of them of TSTS). `runs.csv` has one row per run: experiment, variant, program, time
   limit, hardware threads, trajectories and intensifiers of COTS-CPU, profit, number of items, time at which the run
   reaches its best value, wall time, steps and restarts of COTS-CPU, and the SHA-256 of the source and executable of
   the program; `traces.csv` holds every improvement of the best value of each COTS-CPU run and `programs.csv` the
   programs with their digests. The experiments are `pilot` (1, 4 or 8 trajectories on one core), `one_core` (TSTS and
   COTS-CPU with one trajectory, seeds 1 to 5; COTS-CPU receives the time that TSTS used with the same instance and
   seed), `sixteen_threads` (16 independent TSTS runs, COTS-CPU with 16 cooperating trajectories and 16 independent
-  COTS-CPU runs, on the sixteen hardware threads) and `design` and `design2` (COTS-CPU with one trajectory on one core
-  and its variants), all described in `data/variants.csv`.
+  COTS-CPU runs, on the sixteen hardware threads) and `design`, `design2` and `design3` (COTS-CPU with one trajectory
+  on one core and its variants), all described in `data/variants.csv`.
 - `data/passages/`: the passages to the improvements of the best value in the runs `design2/paths`.
   `events.csv` (4898 rows) has one row per improvement: trajectory, time, profit, `kind` (0 construction, 1 tabu
   walk), `above` (1 when the improving move was taken in the above-record mode), `move` (0 addition, 1 drop, 2 swap,
